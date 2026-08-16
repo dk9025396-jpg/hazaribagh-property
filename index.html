@@ -1,12 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hazaribagh Property</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,7 +24,8 @@
             color: #222;
         }
 
-        /* Header */
+        /* ================= HEADER ================= */
+
         header {
             background: #ffffff;
             padding: 18px 7%;
@@ -27,6 +33,9 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
@@ -46,7 +55,8 @@
             color: #1d4ed8;
         }
 
-        /* Hero */
+        /* ================= HERO ================= */
+
         .hero {
             background: linear-gradient(135deg, #1d4ed8, #2563eb);
             color: white;
@@ -92,7 +102,8 @@
             font-weight: bold;
         }
 
-        /* Categories */
+        /* ================= CATEGORIES ================= */
+
         .categories {
             text-align: center;
             padding: 40px 7%;
@@ -116,13 +127,15 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
             cursor: pointer;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .category:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
         }
 
-        /* Properties */
+        /* ================= PROPERTIES ================= */
+
         .properties {
             padding: 30px 7% 60px;
         }
@@ -143,6 +156,11 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px);
         }
 
         .property-image {
@@ -188,44 +206,116 @@
             background: #153eaa;
         }
 
-        /* Contact */
+        /* ================= SELL SECTION ================= */
+
+        .sell-section {
+            background: #eef2ff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .sell-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .sell-section p {
+            margin-bottom: 20px;
+        }
+
+        /* ================= CONTACT ================= */
+
         .contact {
             background: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         .contact h2 {
             margin-bottom: 15px;
         }
 
-        .contact button {
-            margin-top: 20px;
-            padding: 13px 30px;
-            background: #f97316;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
+        .contact-details {
+            margin-top: 25px;
+            line-height: 2;
+            font-size: 17px;
         }
 
-        /* Footer */
+        .contact-details a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-buttons {
+            margin-top: 25px;
+        }
+
+        .contact-buttons a {
+            text-decoration: none;
+        }
+
+        .call-btn,
+        .whatsapp-btn {
+            border: none;
+            color: white;
+            padding: 14px 25px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .call-btn {
+            background: #1d4ed8;
+        }
+
+        .whatsapp-btn {
+            background: #16a34a;
+        }
+
+        .call-btn:hover {
+            background: #153eaa;
+        }
+
+        .whatsapp-btn:hover {
+            background: #15803d;
+        }
+
+        /* ================= RENT ================= */
+
+        .rent-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8fafc;
+        }
+
+        .rent-section h2 {
+            margin-bottom: 15px;
+        }
+
+        /* ================= FOOTER ================= */
+
         footer {
             background: #111827;
             color: white;
             text-align: center;
             padding: 25px;
+            line-height: 1.8;
         }
 
-        /* Mobile */
+        /* ================= MOBILE ================= */
+
         @media (max-width: 700px) {
+
             header {
                 flex-direction: column;
                 gap: 15px;
             }
 
             nav a {
-                margin: 0 8px;
+                margin: 0 7px;
+                font-size: 14px;
             }
 
             .hero h1 {
@@ -235,13 +325,23 @@
             .search-box {
                 flex-direction: column;
             }
+
+            .search-box button {
+                width: 100%;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- ================= HEADER ================= -->
+
     <header>
 
         <div class="logo">
@@ -249,24 +349,44 @@
         </div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#buy">Buy</a>
-            <a href="#sell">Sell</a>
-            <a href="#rent">Rent</a>
-            <a href="#contact">Contact</a>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#buy">
+                Buy
+            </a>
+
+            <a href="#sell">
+                Sell
+            </a>
+
+            <a href="#rent">
+                Rent
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </nav>
 
     </header>
 
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- ================= HERO ================= -->
 
-        <h1>Find Your Dream Property</h1>
+    <section class="hero" id="home">
+
+        <h1>
+            Find Your Dream Property
+        </h1>
 
         <p>
             Buy, Sell and Rent Properties in Hazaribagh
         </p>
+
 
         <div class="search-box">
 
@@ -285,47 +405,76 @@
     </section>
 
 
-    <!-- Categories -->
+    <!-- ================= CATEGORIES ================= -->
+
     <section class="categories">
 
-        <h2>What are you looking for?</h2>
+        <h2>
+            What are you looking for?
+        </h2>
+
 
         <div class="category-container">
 
-            <div class="category" onclick="showMessage('Buy')">
+
+            <div
+                class="category"
+                onclick="scrollToSection('buy')">
+
                 🏠 Buy Property
+
             </div>
 
-            <div class="category" onclick="showMessage('Sell')">
+
+            <div
+                class="category"
+                onclick="scrollToSection('sell')">
+
                 💰 Sell Property
+
             </div>
 
-            <div class="category" onclick="showMessage('Rent')">
+
+            <div
+                class="category"
+                onclick="scrollToSection('rent')">
+
                 🔑 Rent Property
+
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- Properties -->
+    <!-- ================= BUY PROPERTIES ================= -->
+
     <section class="properties" id="buy">
 
-        <h2>Featured Properties</h2>
+        <h2>
+            Featured Properties
+        </h2>
+
 
         <div class="property-container">
 
-            <!-- Property 1 -->
+
+            <!-- PROPERTY 1 -->
+
             <div class="property-card">
 
                 <div class="property-image">
                     🏡
                 </div>
 
+
                 <div class="property-info">
 
-                    <h3>Beautiful Family House</h3>
+                    <h3>
+                        Beautiful Family House
+                    </h3>
 
                     <div class="price">
                         ₹35 Lakh
@@ -335,10 +484,13 @@
                         📍 Hazaribagh, Jharkhand
                     </div>
 
+
                     <button
                         class="view-btn"
                         onclick="viewProperty('Beautiful Family House')">
+
                         View Property
+
                     </button>
 
                 </div>
@@ -346,16 +498,20 @@
             </div>
 
 
-            <!-- Property 2 -->
+            <!-- PROPERTY 2 -->
+
             <div class="property-card">
 
                 <div class="property-image">
                     🏢
                 </div>
 
+
                 <div class="property-info">
 
-                    <h3>Modern Apartment</h3>
+                    <h3>
+                        Modern Apartment
+                    </h3>
 
                     <div class="price">
                         ₹28 Lakh
@@ -365,10 +521,13 @@
                         📍 Matwari, Hazaribagh
                     </div>
 
+
                     <button
                         class="view-btn"
                         onclick="viewProperty('Modern Apartment')">
+
                         View Property
+
                     </button>
 
                 </div>
@@ -376,16 +535,20 @@
             </div>
 
 
-            <!-- Property 3 -->
+            <!-- PROPERTY 3 -->
+
             <div class="property-card">
 
                 <div class="property-image">
                     🏠
                 </div>
 
+
                 <div class="property-info">
 
-                    <h3>Residential Plot</h3>
+                    <h3>
+                        Residential Plot
+                    </h3>
 
                     <div class="price">
                         ₹18 Lakh
@@ -395,86 +558,191 @@
                         📍 Korra, Hazaribagh
                     </div>
 
+
                     <button
                         class="view-btn"
                         onclick="viewProperty('Residential Plot')">
+
                         View Property
+
                     </button>
 
                 </div>
 
             </div>
 
+
         </div>
 
     </section>
 
 
-    <!-- Sell Section -->
-    <section class="contact" id="sell">
+    <!-- ================= SELL ================= -->
 
-        <h2>Want to Sell Your Property?</h2>
+    <section class="sell-section" id="sell">
+
+        <h2>
+            Want to Sell Your Property?
+        </h2>
 
         <p>
-            List your property and reach potential buyers.
+            List your property and reach potential buyers in Hazaribagh.
         </p>
 
-        <button onclick="showMessage('Sell Property')">
-            List Your Property
-        </button>
+
+        <a href="tel:9608904882">
+
+            <button class="call-btn">
+                📞 Call to List Property
+            </button>
+
+        </a>
 
     </section>
 
 
-    <!-- Rent Section -->
-    <section class="categories" id="rent">
+    <!-- ================= RENT ================= -->
 
-        <h2>Properties Available for Rent</h2>
+    <section class="rent-section" id="rent">
+
+        <h2>
+            Properties Available for Rent
+        </h2>
 
         <p>
             Find houses and apartments available for rent in Hazaribagh.
         </p>
 
+        <br>
+
+        <a href="tel:9608904882">
+
+            <button class="call-btn">
+                📞 Contact for Rental Properties
+            </button>
+
+        </a>
+
     </section>
 
 
-    <!-- Contact -->
+    <!-- ================= CONTACT ================= -->
+
     <section class="contact" id="contact">
 
-        <h2>Contact Us</h2>
+        <h2>
+            Contact Us
+        </h2>
 
         <p>
-            Looking for a property? Contact Hazaribagh Property.
+            Looking for a property in Hazaribagh?
+            Get in touch with us today.
         </p>
 
-        <button onclick="showMessage('Contact')">
-            Contact Us
-        </button>
+
+        <div class="contact-details">
+
+            <p>
+
+                📍 <strong>Address:</strong>
+
+                <br>
+
+                Babugaon, Near S.Lal Coaching Centre,
+
+                <br>
+
+                Hazaribagh, Jharkhand
+
+            </p>
+
+
+            <p>
+
+                📞 <strong>Phone:</strong>
+
+                <a href="tel:9608904882">
+
+                    9608904882
+
+                </a>
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-buttons">
+
+
+            <!-- CALL -->
+
+            <a href="tel:9608904882">
+
+                <button class="call-btn">
+
+                    📞 Call Now
+
+                </button>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/919608904882"
+                target="_blank">
+
+                <button class="whatsapp-btn">
+
+                    💬 WhatsApp
+
+                </button>
+
+            </a>
+
+
+        </div>
 
     </section>
 
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <p>
             © 2026 Hazaribagh Property. All Rights Reserved.
         </p>
 
+        <p>
+            📍 Babugaon, Near S.Lal Coaching Centre, Hazaribagh
+        </p>
+
+        <p>
+            📞 9608904882
+        </p>
+
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script>
+
 
         function searchProperty() {
 
             const search =
                 document.getElementById("searchInput").value;
 
+
             if (search.trim() === "") {
 
-                alert("Please enter a property or location.");
+                alert(
+                    "Please enter a property or location."
+                );
 
             } else {
 
@@ -487,15 +755,6 @@
         }
 
 
-        function showMessage(type) {
-
-            alert(
-                type + " feature selected!"
-            );
-
-        }
-
-
         function viewProperty(propertyName) {
 
             alert(
@@ -504,7 +763,22 @@
 
         }
 
+
+        function scrollToSection(sectionId) {
+
+            document
+                .getElementById(sectionId)
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+
     </script>
 
+
 </body>
+
 </html>
+```
